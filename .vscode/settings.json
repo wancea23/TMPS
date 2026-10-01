@@ -1,0 +1,9 @@
+{
+    "files.autoSave": "afterDelay",
+    "code-runner.executorMap": {
+        "csharp": "cd /d $dir && (if not exist *.csproj cd ..) && dotnet run"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": { "*": false },
+    "github.copilot.nextEditSuggestions.enabled": false
+}
