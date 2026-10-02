@@ -6,6 +6,6 @@ public class Car
     public int Year { get; set; }
     public FuelType FuelType { get; set; }
     public int Mileage { get; set; }
-    public int Enginecc { get; set; }
+    public int EngineCc { get; set; }
     public decimal Price { get; set; }
 }

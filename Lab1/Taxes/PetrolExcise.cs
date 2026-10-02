@@ -3,28 +3,28 @@ namespace Lab1.Taxes;
 
 public class PetrolExcise : IExciseRule
 {
-    public FuelType FuelType { get;} = FuelType.Petrol;
+    public FuelType FuelType { get; } = FuelType.Petrol;
     public decimal CalculateExcise(Car car)
     {
-        if (car.Enginecc <= 1000)
+        if (car.EngineCc <= 1000)
         {
-            return car.Enginecc*9.56m;
+            return car.EngineCc * 9.56m;
         }
-        else if (car.Enginecc <= 1500)
+        else if (car.EngineCc <= 1500)
         {
-            return car.Enginecc*12.23m;
+            return car.EngineCc * 12.23m;
         }
-        else if (car.Enginecc <= 2000)
+        else if (car.EngineCc <= 2000)
         {
-            return car.Enginecc*18.9m;
+            return car.EngineCc * 18.9m;
         }
-        else if (car.Enginecc <= 3000)
+        else if (car.EngineCc <= 3000)
         {
-            return car.Enginecc*31.14m;
+            return car.EngineCc * 31.14m;
         }
         else
         {
-            return car.Enginecc*55.6m;
+            return car.EngineCc * 55.6m;
         }
     }
 }
