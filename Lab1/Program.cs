@@ -1,5 +1,6 @@
 ﻿using Lab1.Models;
 using Lab1.Taxes;
+using Lab1.Services;
 
 var car = new List<Car>
 {
@@ -16,16 +17,11 @@ var exciseRule = new List<IExciseRule>
     new HybridExcise()
 };
 
+var calculator = new ImportCostCalculator(exciseRule);
+
 foreach (var c in car)
 {
     Console.WriteLine($"{c.Title} ({c.Year}) - {c.FuelType}, Mileage: {c.Mileage} km, Engine: {c.Enginecc} cc, Price: ${c.Price}");
-
-    foreach (var rule in exciseRule)
-    {
-        if (rule.FuelType == c.FuelType)
-        {
-            Console.WriteLine($"Excise: {rule.CalculateExcise(c)} lei");
-        }
-    }
-
+    Console.WriteLine($"Excise: {calculator.CalculateExcise(c)} lei");
+    Console.WriteLine($"Total: {calculator.CalculateTotal(c):N2} EUR");
 }
