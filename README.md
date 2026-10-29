@@ -13,14 +13,17 @@ The project grows during the semester. Each lab builds on the same code and appl
 | Lab | Topic | Status | Report |
 |-----|-------|--------|--------|
 | Lab1 | SOLID principles | Done | [Lab1/README.md](Lab1/README.md) |
+| Lab2 | Creational patterns (Singleton, Factory Method, Builder) | Done | [Lab2/README.md](Lab2/README.md) |
 
 ## Structure
 
+Each lab is its own project in its own folder and starts as a copy of the previous one.
+
 ```
-Lab1/
-  Models/     car data (Car, FuelType)
-  Taxes/      excise rules, one class per fuel type
-  Services/   ImportCostCalculator
+Lab2/
+  Models/     car data (Car, FuelType) and CarBuilder
+  Taxes/      excise rules, one class per fuel type, and ExciseRuleFactory
+  Services/   ImportSettings and ImportCostCalculator
   Program.cs
 ```
 
@@ -30,4 +33,5 @@ Requires the .NET 10 SDK.
 
 ```
 dotnet run --project Lab1
+dotnet run --project Lab2
 ```
